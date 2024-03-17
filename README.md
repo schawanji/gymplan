@@ -1,3 +1,5 @@
-we are creating an  application of our gym plan workout!
+#  gymplan webApp!
 
-contributers : Sharon and Breanden
+### contributers 
+- Sharon 
+- Breanden
