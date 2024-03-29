@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Plan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Exercise catalogue</h1>
-    <div id="push-ups"></div>
-    <div id="pull-ups"></div>
-    <div id="squats"></div>
-    <div id="deadlifts"></div>
-
+    <h1 class="first">Gym workout plan.</h1>
+    <form id="input-form">
+        <input type="text" id="input-text" placeholder="add new Exercise">
+        <button type="submit">Add</button>
+    </form>
+    <div id="exercises"></div>
     <script src="script.js"></script>
 </body>
+
 </html>

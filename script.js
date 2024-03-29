@@ -1,5 +1,7 @@
 
-const objectOne = {
+
+
+const object = {
 
     pushUpsExercise: {
         name: "Push-ups",
@@ -9,6 +11,7 @@ const objectOne = {
 
 
     },
+
     pullUpsExercise: {
         name: "Pull-ups",
         tags: ["back", "Body mass", " Body core"],
@@ -16,6 +19,7 @@ const objectOne = {
         videoLink: ""
 
     },
+
     squatsExercise: {
         name: "squats",
         tags: ["quads", "glutes", " Body core", "harmstrings"],
@@ -23,6 +27,7 @@ const objectOne = {
         videoLink: ""
 
     },
+
     deadliftsExercise: {
         name: "deadlifts",
         tags: ["back", "Body mass", " Body core", "harmstrings"],
@@ -31,22 +36,43 @@ const objectOne = {
 
     }
 }
-const pushUpsDes = objectOne.pushUpsExercise.description;
-const pushUpsDesElement = document.getElementById("push-ups");
-pushUpsDesElement.innerHTML = (pushUpsDesElement);
 
-const pullUpsDes = objectOne.pullUpsExercise.description;
-const pullupsDesElement = document.getElementById("pull-ups");
-pullupsDesElement.innerHTML = (pullupsDesElement);
+object.absExercices = {
+    name: "Six pack",
+    tags: ["abs", "back", "core"]
 
-const squatsDes = objectOne.squatsExercise.description;
-const squatsDesElement = document.getElementById("squats");
-squatsDesElement.innerHTML = (squatsDesElement);
+}
 
-const deadLiftsDes = objectOne.deadliftsExercise.description;
-const deadLiftsDesElement = document.getElementById("deadlifts");
-deadLiftsDesElement.innerHTML = (deadLiftsDesElement);
+console.log(object.absExercices)
+
+const absExercices = object.absExercices.tags;
+
+absExercices.push("oblique");
 
 
+/*const exercisesElements = document.getElementById("exercises");
+
+for (let exercises in object) {
+    exercisesElements.innerHTML += `<h2>${object[exercises].name}</h2>`
+    exercisesElements.innerHTML += `<li>${object[exercises].tags}</li>`
+    exercisesElements.innerHTML += `<li>${object[exercises].description}</li>`
+    console.log(exercisesElements);
+}*/
+
+const formElement = document.getElementById("input-form");
+const divExercisesElement = document.getElementById("exercises");
 
 
+const submitFormHandler = (event) => {
+    event.preventDefault();
+
+
+    const inputTextElement = document.getElementById("input-text");
+    const newExercise = inputTextElement.value;
+
+    divExercisesElement.innerHTML = newExercise;
+    inputTextElement.value = " ";
+    console.log();
+}
+
+formElement.addEventListener("submit", submitFormHandler); 
